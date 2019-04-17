@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		51778793226065D700E40D99 /* Trivia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51778792226065D700E40D99 /* Trivia.swift */; };
 		51778795226065FB00E40D99 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51778794226065FB00E40D99 /* Question.swift */; };
+		51DE5A072267132B00162B94 /* Sounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DE5A062267132B00162B94 /* Sounds.swift */; };
 		972A72B12056F06C0059EF4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972A72B02056F06C0059EF4A /* AppDelegate.swift */; };
 		972A72B32056F06C0059EF4A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972A72B22056F06C0059EF4A /* ViewController.swift */; };
 		972A72B62056F06C0059EF4A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 972A72B42056F06C0059EF4A /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		51778792226065D700E40D99 /* Trivia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trivia.swift; sourceTree = "<group>"; };
 		51778794226065FB00E40D99 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		51DE5A062267132B00162B94 /* Sounds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sounds.swift; sourceTree = "<group>"; };
 		972A72AD2056F06C0059EF4A /* EnhanceQuizStarter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EnhanceQuizStarter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		972A72B02056F06C0059EF4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		972A72B22056F06C0059EF4A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 			children = (
 				972A72B02056F06C0059EF4A /* AppDelegate.swift */,
 				972A72B22056F06C0059EF4A /* ViewController.swift */,
+				51DE5A062267132B00162B94 /* Sounds.swift */,
 				51778792226065D700E40D99 /* Trivia.swift */,
 				51778794226065FB00E40D99 /* Question.swift */,
 				972A72B42056F06C0059EF4A /* Main.storyboard */,
@@ -150,6 +153,7 @@
 				972A72B32056F06C0059EF4A /* ViewController.swift in Sources */,
 				51778795226065FB00E40D99 /* Question.swift in Sources */,
 				51778793226065D700E40D99 /* Trivia.swift in Sources */,
+				51DE5A072267132B00162B94 /* Sounds.swift in Sources */,
 				972A72B12056F06C0059EF4A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,7 +296,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = R9E84DX62H;
+				DEVELOPMENT_TEAM = R4U7HWSD6U;
 				INFOPLIST_FILE = EnhanceQuizStarter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.teamtreehouse.EnhanceQuizStarter;
@@ -307,7 +311,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = R9E84DX62H;
+				DEVELOPMENT_TEAM = R4U7HWSD6U;
 				INFOPLIST_FILE = EnhanceQuizStarter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.teamtreehouse.EnhanceQuizStarter;

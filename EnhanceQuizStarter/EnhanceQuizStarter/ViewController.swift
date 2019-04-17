@@ -20,15 +20,12 @@ class ViewController: UIViewController {
     var indexOfSelectedQuestion = 0
     let progress = Progress(totalUnitCount: 15)
     
-    var gameSound: SystemSoundID = 0
-    var correctAnswerSound: SystemSoundID = 1335
-    var inCorrectAnswerSound: SystemSoundID = 1329
-    var timeUpSound: SystemSoundID = 1005
-    
     var trivia = Trivia()
     var selectedQuestion: Question!
     
     var timer = Timer()
+    
+    
     
     // MARK: - Outlets
     
@@ -42,22 +39,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        loadGameStartSound()
-        playSound(gameSound)
+        Sound.loadGameStartSound()
+        Sound.playGameSound()
         displayQuestion()
     }
     
     // MARK: - Helpers
-    
-    func loadGameStartSound() {
-        let path = Bundle.main.path(forResource: "GameSound", ofType: "wav")
-        let soundUrl = URL(fileURLWithPath: path!)
-        AudioServicesCreateSystemSoundID(soundUrl as CFURL, &gameSound)
-    }
-    
-    func playSound(_ systemID: SystemSoundID) {
-        AudioServicesPlaySystemSound(systemID)
-    }
     
     func displayQuestion() {
         selectedQuestion = trivia.randomQuestion()
@@ -75,7 +62,7 @@ class ViewController: UIViewController {
         timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { (timer) in
             guard self.progress.isFinished == false else {
                 timer.invalidate()
-                self.playSound(self.timeUpSound)
+                Sound.playTimeUpSound()
                 self.displayAlert(withMessage: self.selectedQuestion.answer)
                 return
             }
@@ -161,13 +148,13 @@ class ViewController: UIViewController {
         let correctAnswer = selectedQuestion.answer
         let buttonTitle = sender.title(for: .normal)
         if buttonTitle == correctAnswer {
-            playSound(correctAnswerSound)
+            Sound.playCorrectAnswerSound()
             correctQuestions += 1
             timer.invalidate()
             displayResult(true)
             loadNextRound(delay: 2)
         } else {
-            playSound(inCorrectAnswerSound)
+            Sound.playIncorrectAnswerSound()
             timer.invalidate()
             displayResult(false, answer: correctAnswer)
         }
